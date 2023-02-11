@@ -9,6 +9,15 @@ module.exports = {
             res.send(e);
         }
     },
+    getEmployeeById: async (req,res) =>{
+        let id = req.params.id
+        try{
+            const employee = await EmployeeModel.findById({_id:id});
+            res.send(employee);
+        }catch(e){
+            res.send(e);
+        }
+    },
     addEmployees:async (req,res) =>{
         try{
             const employee = new EmployeeModel(req.body);
