@@ -4,19 +4,14 @@ const EmployeeSchema = new mongoose.Schema({
     first_name:{
         type:String,
         required:true,
-        minLength: 6,
-        maxLength: 10
     },
     last_name:{
         type:String,
         required:true,
-        minLength: 6,
-        maxLength: 10
     },
     email:{
         type:String,
-        required:true,
-        unique:true
+        required:false
     },
     number:{
         type:Number
