@@ -4,7 +4,7 @@
   "description": "",
   "main": "service.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon server.js"
   },
   "author": "Kaveen Gunawardhane",
@@ -16,5 +16,9 @@
     "mongodb": "^5.0.0",
     "mongoose": "^6.9.1",
     "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "jest": "^29.4.2",
+    "supertest": "^6.3.3"
   }
 }

@@ -5,8 +5,10 @@ module.exports = {
         try{
             const employees = await EmployeeModel.find();
             res.send(employees);
+            res.status(200)
         }catch(e){
             res.send(e);
+            res.status(404)
         }
     },
     getEmployeeById: async (req,res) =>{
@@ -14,8 +16,10 @@ module.exports = {
         try{
             const employee = await EmployeeModel.findById({_id:id});
             res.send(employee);
+            res.status(200)
         }catch(e){
             res.send(e);
+            res.status(404)
         }
     },
     addEmployees:async (req,res) =>{
